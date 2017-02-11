@@ -1,0 +1,8 @@
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\bin\Debug\first_application.exe.config
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\bin\Debug\first_application.exe
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\bin\Debug\first_application.pdb
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\obj\Debug\first_application.Form1.resources
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\obj\Debug\first_application.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\obj\Debug\first_application.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\obj\Debug\first_application.exe
+C:\Users\user\Documents\GitHub\ComputerGraph\first_application\obj\Debug\first_application.pdb

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test
+namespace first_application
 {
     public partial class Form1 : Form
     {
@@ -17,8 +17,14 @@ namespace test
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnHello_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello " + tbName.Text);
             
         }
     }

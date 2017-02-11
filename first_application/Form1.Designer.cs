@@ -1,4 +1,4 @@
-﻿namespace test
+﻿namespace first_application
 {
     partial class Form1
     {
@@ -29,43 +29,44 @@
         private void InitializeComponent()
         {
             this.btnHello = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tbName = new System.Windows.Forms.Label();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnHello
             // 
-            this.btnHello.Location = new System.Drawing.Point(282, 12);
+            this.btnHello.Location = new System.Drawing.Point(268, 15);
             this.btnHello.Name = "btnHello";
-            this.btnHello.Size = new System.Drawing.Size(120, 20);
+            this.btnHello.Size = new System.Drawing.Size(73, 20);
             this.btnHello.TabIndex = 0;
             this.btnHello.Text = "Hello";
             this.btnHello.UseVisualStyleBackColor = true;
-            this.btnHello.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(159, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 20);
-            this.textBox1.TabIndex = 1;
+            this.btnHello.Click += new System.EventHandler(this.btnHello_Click);
             // 
             // tbName
             // 
-            this.tbName.AutoSize = true;
-            this.tbName.Location = new System.Drawing.Point(69, 16);
+            this.tbName.Location = new System.Drawing.Point(162, 15);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(84, 13);
-            this.tbName.TabIndex = 2;
-            this.tbName.Text = "Enter your name";
+            this.tbName.Size = new System.Drawing.Size(100, 20);
+            this.tbName.TabIndex = 1;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(72, 18);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(84, 13);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Enter your name";
+            this.lblName.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 42);
+            this.ClientSize = new System.Drawing.Size(401, 47);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.tbName);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnHello);
             this.Name = "Form1";
             this.Text = "First application on C#";
@@ -77,8 +78,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnHello;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label tbName;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Label lblName;
     }
 }
 
