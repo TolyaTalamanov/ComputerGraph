@@ -6,3 +6,11 @@ C:\Users\tvc\Documents\Visual Studio 2013\Projects\test_bevzuk\TalamanovBatanina
 C:\Users\tvc\Documents\Visual Studio 2013\Projects\test_bevzuk\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.csproj.GenerateResource.Cache
 C:\Users\tvc\Documents\Visual Studio 2013\Projects\test_bevzuk\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.exe
 C:\Users\tvc\Documents\Visual Studio 2013\Projects\test_bevzuk\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.pdb
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.exe
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.pdb
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\bin\Debug\TalamanovBatanina_2.exe
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\bin\Debug\TalamanovBatanina_2.pdb
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.csprojResolveAssemblyReference.cache
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.Form1.resources
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.Properties.Resources.resources
+C:\Users\tvc\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.csproj.GenerateResource.Cache

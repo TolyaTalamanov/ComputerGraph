@@ -20,7 +20,7 @@ namespace TalamanovBatanina_2
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Image files | *.png; *.bmp; *jpg | All Files (*.*) | *.* ";
+            dialog.Filter = "Image files | *.png; *.jpg; *.bmp  | All Files (*.*) | *.* ";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 image = new Bitmap(dialog.FileName);
@@ -29,15 +29,13 @@ namespace TalamanovBatanina_2
             }
         }
 
-   
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void inversionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            InvertFilter filter = new InvertFilter();
+            Bitmap resultImage = filter.processImage(image);
+            pictureBox1.Image = resultImage;
+            pictureBox1.Refresh();
         }
 
-        private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            InvertFilter filter = new InvertFilter;
-        }
     }
 }
