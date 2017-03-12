@@ -1,0 +1,3 @@
+C:\Users\ПК\Documents\GitHub\ComputerGraph\Region\Region\obj\x86\Debug\Region.Form1.resources
+C:\Users\ПК\Documents\GitHub\ComputerGraph\Region\Region\obj\x86\Debug\Region.Properties.Resources.resources
+C:\Users\ПК\Documents\GitHub\ComputerGraph\Region\Region\obj\x86\Debug\Region.csproj.GenerateResource.Cache

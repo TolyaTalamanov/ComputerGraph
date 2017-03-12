@@ -1,0 +1,7 @@
+C:\Users\ПК\Documents\GitHub\ComputerGraph\WinForm_1\WinForm_1\bin\Debug\WinForm_1.exe
+C:\Users\ПК\Documents\GitHub\ComputerGraph\WinForm_1\WinForm_1\bin\Debug\WinForm_1.pdb
+C:\Users\ПК\Documents\GitHub\ComputerGraph\WinForm_1\WinForm_1\obj\x86\Debug\WinForm_1.Form1.resources
+C:\Users\ПК\Documents\GitHub\ComputerGraph\WinForm_1\WinForm_1\obj\x86\Debug\WinForm_1.Properties.Resources.resources
+C:\Users\ПК\Documents\GitHub\ComputerGraph\WinForm_1\WinForm_1\obj\x86\Debug\WinForm_1.csproj.GenerateResource.Cache
+C:\Users\ПК\Documents\GitHub\ComputerGraph\WinForm_1\WinForm_1\obj\x86\Debug\WinForm_1.exe
+C:\Users\ПК\Documents\GitHub\ComputerGraph\WinForm_1\WinForm_1\obj\x86\Debug\WinForm_1.pdb

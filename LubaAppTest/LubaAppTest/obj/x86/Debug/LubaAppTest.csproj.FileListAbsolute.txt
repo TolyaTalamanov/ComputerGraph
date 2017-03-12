@@ -1,0 +1,6 @@
+C:\Users\ПК\Documents\GitHub\ComputerGraph\LubaAppTest\LubaAppTest\bin\Debug\LubaAppTest.exe
+C:\Users\ПК\Documents\GitHub\ComputerGraph\LubaAppTest\LubaAppTest\bin\Debug\LubaAppTest.pdb
+C:\Users\ПК\Documents\GitHub\ComputerGraph\LubaAppTest\LubaAppTest\obj\x86\Debug\LubaAppTest.Properties.Resources.resources
+C:\Users\ПК\Documents\GitHub\ComputerGraph\LubaAppTest\LubaAppTest\obj\x86\Debug\LubaAppTest.csproj.GenerateResource.Cache
+C:\Users\ПК\Documents\GitHub\ComputerGraph\LubaAppTest\LubaAppTest\obj\x86\Debug\LubaAppTest.exe
+C:\Users\ПК\Documents\GitHub\ComputerGraph\LubaAppTest\LubaAppTest\obj\x86\Debug\LubaAppTest.pdb

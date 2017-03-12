@@ -1,0 +1,6 @@
+C:\Users\ПК\Documents\GitHub\ComputerGraph\myRegion\myRegion\bin\Debug\myRegion.exe
+C:\Users\ПК\Documents\GitHub\ComputerGraph\myRegion\myRegion\bin\Debug\myRegion.pdb
+C:\Users\ПК\Documents\GitHub\ComputerGraph\myRegion\myRegion\obj\x86\Debug\myRegion.Properties.Resources.resources
+C:\Users\ПК\Documents\GitHub\ComputerGraph\myRegion\myRegion\obj\x86\Debug\myRegion.csproj.GenerateResource.Cache
+C:\Users\ПК\Documents\GitHub\ComputerGraph\myRegion\myRegion\obj\x86\Debug\myRegion.exe
+C:\Users\ПК\Documents\GitHub\ComputerGraph\myRegion\myRegion\obj\x86\Debug\myRegion.pdb
