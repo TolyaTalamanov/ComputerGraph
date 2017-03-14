@@ -59,6 +59,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button2 = new System.Windows.Forms.Button();
+            this.gradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoSelvesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +113,8 @@
             this.spinToolStripMenuItem,
             this.verticalWavesFilterToolStripMenuItem,
             this.horizontalWavesFilterToolStripMenuItem,
-            this.effectOfGlassToolStripMenuItem});
+            this.effectOfGlassToolStripMenuItem,
+            this.autoSelvesToolStripMenuItem});
             this.точечныеToolStripMenuItem.Name = "точечныеToolStripMenuItem";
             this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.точечныеToolStripMenuItem.Text = "Точечные";
@@ -232,7 +235,8 @@
             this.erosionToolStripMenuItem,
             this.dilationToolStripMenuItem,
             this.openingToolStripMenuItem,
-            this.closingToolStripMenuItem});
+            this.closingToolStripMenuItem,
+            this.gradToolStripMenuItem});
             this.mathMorfologyToolStripMenuItem.Name = "mathMorfologyToolStripMenuItem";
             this.mathMorfologyToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.mathMorfologyToolStripMenuItem.Text = "MathMorfology";
@@ -318,6 +322,20 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // gradToolStripMenuItem
+            // 
+            this.gradToolStripMenuItem.Name = "gradToolStripMenuItem";
+            this.gradToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gradToolStripMenuItem.Text = "Grad";
+            this.gradToolStripMenuItem.Click += new System.EventHandler(this.gradToolStripMenuItem_Click);
+            // 
+            // autoSelvesToolStripMenuItem
+            // 
+            this.autoSelvesToolStripMenuItem.Name = "autoSelvesToolStripMenuItem";
+            this.autoSelvesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.autoSelvesToolStripMenuItem.Text = "AutoSelves";
+            this.autoSelvesToolStripMenuItem.Click += new System.EventHandler(this.autoSelvesToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,6 +390,8 @@
         private System.Windows.Forms.ToolStripMenuItem openingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medianFilterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gradToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoSelvesToolStripMenuItem;
     }
 }
 

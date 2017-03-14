@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoSelvesFilter.cs" />
     <Compile Include="BlueFilter.cs" />
     <Compile Include="BrightnessFilter.cs" />
     <Compile Include="EffectOfGlass.cs" />

@@ -196,10 +196,23 @@ namespace TalamanovBatanina_2
             Filters filter = new MedianFilter(5);
             backgroundWorker1.RunWorkerAsync(filter);
 
-            //MedianFilter filter = new MedianFilter();
-            //pictureBox1.Image = filter.processImage(image);
-            //pictureBox1.Refresh();
+            
 
+        }
+
+        private void gradToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+
+            pictureBox1.Image = MathMorfology.Gradient(image, matr);
+            pictureBox1.Refresh();
+
+        }
+
+        private void autoSelvesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new AutoSelvesFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
     }
 }

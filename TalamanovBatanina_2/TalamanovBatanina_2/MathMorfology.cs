@@ -112,6 +112,41 @@ namespace TalamanovBatanina_2
             return resultImage;
 
         }
+
+        static public Bitmap Gradient(Bitmap sourceImage, bool[,] matr)
+        {
+            
+            Bitmap image1 = Dilation(sourceImage, matr);
+            Bitmap image2 = Erosion(sourceImage, matr);
+            Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
+            int R;
+            int G;
+            int B;
+
+            for (int i = 0; i < sourceImage.Width; i++)
+            {
+                for (int j = 0; j < sourceImage.Height; j++)
+                {
+                    R = image1.GetPixel(i, j).R - image2.GetPixel(i,j).R;
+                    G = image1.GetPixel(i, j).G - image2.GetPixel(i,j).G;
+                    B = image1.GetPixel(i, j).B - image2.GetPixel(i,j).B;
+
+                    resultImage.SetPixel(i, j, Color.FromArgb(Clamp(R, 0, 255), Clamp(G, 0, 255), Clamp(G, 0, 255)));
+
+                }
+            }
+            return resultImage;
+                    
+                    
+        }
+        static private int Clamp(int value, int min, int max)
+        {
+            if (value < min)
+                return min;
+            if (value > max)
+                return max;
+            return value;
+        }
     }
 
 }
