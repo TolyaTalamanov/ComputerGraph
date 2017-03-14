@@ -40,7 +40,7 @@ namespace TalamanovBatanina_2
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             
-            Bitmap newImage = ((MedianFilter)e.Argument).processImage(image, backgroundWorker1);
+            Bitmap newImage = ((Filters)e.Argument).processImage(image, backgroundWorker1);
             if (backgroundWorker1.CancellationPending != true)
                 image = newImage;
 
@@ -192,10 +192,14 @@ namespace TalamanovBatanina_2
         private void medianFilterToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            MedianFilter filter = new MedianFilter(5);
-            pictureBox1.Image = filter.processImage(image);
-            pictureBox1.Refresh();
-            
+
+            Filters filter = new MedianFilter(5);
+            backgroundWorker1.RunWorkerAsync(filter);
+
+            //MedianFilter filter = new MedianFilter();
+            //pictureBox1.Image = filter.processImage(image);
+            //pictureBox1.Refresh();
+
         }
     }
 }

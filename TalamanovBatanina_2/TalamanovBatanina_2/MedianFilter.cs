@@ -19,7 +19,16 @@ class MyColor : IComparable
 
     public int CompareTo(object obj)
     {
-        return R + G + B;
+        MyColor ob = (MyColor)obj;
+        if (R + G + B > ob.R + ob.G + ob.B)
+            return 1;
+
+        if (R + G + B == ob.R + ob.G + ob.B)
+            return 0;
+
+        return -1;
+
+        
     }
 }
 
@@ -40,30 +49,35 @@ namespace TalamanovBatanina_2
             return medianColor;
         }
 
-        public Bitmap processImage(Bitmap sourseImage)
+        override public Bitmap processImage(Bitmap sourseImage ,BackgroundWorker worker)
         {
             Bitmap resultImage = new Bitmap(sourseImage.Width, sourseImage.Height);
 
             //var arrayR = new List<int>();
             //var arrayG = new List<int>();
             //var arrayB = new List<int>();
+
             var arrayColor = new List<MyColor>();
             int R;
             int G;
             int B;
             MyColor color;
-
+            
+            
 
 
 
 
             for (int y = size / 2; y < sourseImage.Height - size / 2; y++)
             {
-                
+                worker.ReportProgress((int)((float)(y- size / 2) / resultImage.Width * 100));
+                if (worker.CancellationPending)
+                    return null;
 
                 for (int x = size / 2; x < sourseImage.Width - size / 2; x++)
                 {
                     arrayColor.Clear();
+                   
                     //arrayR.Clear();
                     //arrayG.Clear();
                     //arrayB.Clear();
@@ -73,24 +87,28 @@ namespace TalamanovBatanina_2
                         for (int i = -size / 2; i <= size / 2; i++)
                         {
                             R = sourseImage.GetPixel(x + i, y + j).R;
-                            G = sourseImage.GetPixel(x + i, y + j).R;
-                            B = sourseImage.GetPixel(x + i, y + j).R;
+                            G = sourseImage.GetPixel(x + i, y + j).G;
+                            B = sourseImage.GetPixel(x + i, y + j).B;
                             color = new MyColor(R, G, B);
                             arrayColor.Add(color);
+                            
                             //    arrayR.Add(sourseImage.GetPixel(x + i, y + j).R);
                             //    arrayG.Add(sourseImage.GetPixel(x + i, y + j).G);
                             //    arrayB.Add(sourseImage.GetPixel(x + i, y + j).B);
                             //}
                         }
                     }
-                        arrayColor.Sort();
+
+                    arrayColor.Sort();
 
 
                     //arrayR.Sort();
                     //arrayG.Sort();
                     //arrayB.Sort();
-
-                    medianColor = Color.FromArgb(arrayColor.ElementAt(size / 2).R , arrayColor.ElementAt(size / 2).G, arrayColor.ElementAt(size / 2).B);
+                    R = arrayColor.ElementAt(size * size / 2).R;
+                    G = arrayColor.ElementAt(size * size / 2).G;
+                    B = arrayColor.ElementAt(size * size/ 2).B;
+                    medianColor = Color.FromArgb( R,G,B  );
 
                     resultImage.SetPixel(x - size / 2, y - size / 2, calculateNewPixelColor(sourseImage, x - size / 2,y - size / 2));
                 }

@@ -53,12 +53,12 @@
             this.dilationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medianFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button2 = new System.Windows.Forms.Button();
-            this.medianFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -265,6 +265,13 @@
             this.closingToolStripMenuItem.Text = "Closing";
             this.closingToolStripMenuItem.Click += new System.EventHandler(this.closingToolStripMenuItem_Click);
             // 
+            // medianFilterToolStripMenuItem
+            // 
+            this.medianFilterToolStripMenuItem.Name = "medianFilterToolStripMenuItem";
+            this.medianFilterToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.medianFilterToolStripMenuItem.Text = "MedianFilter";
+            this.medianFilterToolStripMenuItem.Click += new System.EventHandler(this.medianFilterToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 27);
@@ -295,8 +302,10 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 464);
+            this.progressBar1.Maximum = 110;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(651, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 3;
             // 
             // button2
@@ -308,13 +317,6 @@
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // medianFilterToolStripMenuItem
-            // 
-            this.medianFilterToolStripMenuItem.Name = "medianFilterToolStripMenuItem";
-            this.medianFilterToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.medianFilterToolStripMenuItem.Text = "MedianFilter";
-            this.medianFilterToolStripMenuItem.Click += new System.EventHandler(this.medianFilterToolStripMenuItem_Click);
             // 
             // Form1
             // 
