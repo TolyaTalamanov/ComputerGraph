@@ -59,6 +59,8 @@
     <Compile Include="GrayScaleFilter.cs" />
     <Compile Include="Harshness.cs" />
     <Compile Include="HorizontalWavesFilter.cs" />
+    <Compile Include="MathMorfology.cs" />
+    <Compile Include="MedianFilter.cs" />
     <Compile Include="MotionBlur.cs" />
     <Compile Include="VerticalWavesFilter.cs" />
     <Compile Include="InvertFilter.cs" />

@@ -39,7 +39,8 @@ namespace TalamanovBatanina_2
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            Bitmap newImage = ((Filters)e.Argument).processImage(image, backgroundWorker1);
+            
+            Bitmap newImage = ((MedianFilter)e.Argument).processImage(image, backgroundWorker1);
             if (backgroundWorker1.CancellationPending != true)
                 image = newImage;
 
@@ -154,6 +155,47 @@ namespace TalamanovBatanina_2
         {
             Filters filter = new MotionBlur(3);
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void erosionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool [,] matr = new bool[3,3]  { {false,true,false },{true,false,true }, {false,true,false } };
+            pictureBox1.Image = MathMorfology.Erosion(image, matr);
+            pictureBox1.Refresh();
+        }
+
+        private void dilationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+            pictureBox1.Image = MathMorfology.Dilation(image, matr);
+            pictureBox1.Refresh();
+        }
+
+        private void openingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+            bool[,] matr1 = new bool[3, 3] { { true, true, true }, { true, true, true }, { true, true, true } };
+            pictureBox1.Image = MathMorfology.Dilation(MathMorfology.Erosion(image, matr1), matr1);
+            pictureBox1.Refresh();
+        }
+
+        private void closingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+            bool[,] matr1 = new bool[3, 3] { { true, true, true }, { true, true, true }, { true, true, true } };
+
+            pictureBox1.Image = MathMorfology.Erosion(MathMorfology.Dilation(image, matr1), matr1);
+            pictureBox1.Refresh();
+
+        }
+
+        private void medianFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            MedianFilter filter = new MedianFilter(5);
+            pictureBox1.Image = filter.processImage(image);
+            pictureBox1.Refresh();
+            
         }
     }
 }

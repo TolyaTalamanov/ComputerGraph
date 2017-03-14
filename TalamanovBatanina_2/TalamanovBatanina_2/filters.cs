@@ -9,7 +9,7 @@ namespace TalamanovBatanina_2
 {
     abstract class Filters
     {
-        public Bitmap processImage(Bitmap sourseImage)
+        virtual public Bitmap processImage(Bitmap sourseImage)
         {
             Bitmap resultImage = new Bitmap(sourseImage.Width, sourseImage.Height);
 
@@ -19,7 +19,7 @@ namespace TalamanovBatanina_2
 
                     return resultImage;
         }
-        public Bitmap processImage(Bitmap sourseImage, BackgroundWorker worker )
+        virtual public Bitmap processImage(Bitmap sourseImage, BackgroundWorker worker )
         {
             Bitmap resultImage = new Bitmap(sourseImage.Width, sourseImage.Height);
 
