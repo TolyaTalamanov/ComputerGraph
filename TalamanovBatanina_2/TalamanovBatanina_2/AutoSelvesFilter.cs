@@ -18,13 +18,7 @@ namespace TalamanovBatanina_2
 
         private void setMaxRGB(Bitmap sourceImage)
         {
-            int maxr = 0;
-            int maxg = 0;
-            int maxb = 0;
-
-            int minr = 255;
-            int ming = 255;
-            int minb = 255;
+            
 
             MyColor color;
 

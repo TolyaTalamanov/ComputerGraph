@@ -11,7 +11,11 @@ namespace TalamanovBatanina_2
 {
     public partial class Form1 : Form
     {
+        Form Form2;
         string startImageDialog;
+        static int n;
+        bool[,] matr;
+        DataGridView DataGrid1;
         Bitmap image;
         public Form1()
         {
@@ -159,32 +163,32 @@ namespace TalamanovBatanina_2
 
         private void erosionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool [,] matr = new bool[3,3]  { {false,true,false },{true,false,true }, {false,true,false } };
+            //bool [,] matr = new bool[3,3]  { {false,true,false },{true,false,true }, {false,true,false } };
             pictureBox1.Image = MathMorfology.Erosion(image, matr);
             pictureBox1.Refresh();
         }
 
         private void dilationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+            //bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
             pictureBox1.Image = MathMorfology.Dilation(image, matr);
             pictureBox1.Refresh();
         }
 
         private void openingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
-            bool[,] matr1 = new bool[3, 3] { { true, true, true }, { true, true, true }, { true, true, true } };
-            pictureBox1.Image = MathMorfology.Dilation(MathMorfology.Erosion(image, matr1), matr1);
+            //bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+            
+            pictureBox1.Image = MathMorfology.Dilation(MathMorfology.Erosion(image, matr), matr);
             pictureBox1.Refresh();
         }
 
         private void closingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
-            bool[,] matr1 = new bool[3, 3] { { true, true, true }, { true, true, true }, { true, true, true } };
+            //bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+            
 
-            pictureBox1.Image = MathMorfology.Erosion(MathMorfology.Dilation(image, matr1), matr1);
+            pictureBox1.Image = MathMorfology.Erosion(MathMorfology.Dilation(image, matr), matr);
             pictureBox1.Refresh();
 
         }
@@ -202,7 +206,7 @@ namespace TalamanovBatanina_2
 
         private void gradToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
+            //bool[,] matr = new bool[3, 3] { { false, true, false }, { true, false, true }, { false, true, false } };
 
             pictureBox1.Image = MathMorfology.Gradient(image, matr);
             pictureBox1.Refresh();
@@ -217,21 +221,50 @@ namespace TalamanovBatanina_2
 
         private void x3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int n = 3;
-            Form Form2 = new Form();
+            n = 3;
+            matr = new bool[n, n];
+            Form2 = new Form();
             Form2.Size = new Size(300, 150);
             Form2.Show();
-            DataGridView DataGrid1 = new DataGridView();
+            DataGrid1 = new DataGridView();
             DataGrid1.Size = new Size(200, 100);
             DataGrid1.ColumnCount = n;
             DataGrid1.RowCount = n;
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < n; i++)
             {
                 DataGrid1.Columns[i].Width = 50;
                 DataGrid1.Rows[i].Height = 25;
             }
             Form2.Controls.Add(DataGrid1);
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < n; j++)
+                    DataGrid1[i, j].Value = 0;
             DataGrid1.Show();
+            Button ok = new Button();
+            ok.Text = "ok";
+            ok.Location = new Point(200,75);
+            ok.Click += new EventHandler(button_click);
+            Form2.Controls.Add(ok);
+            ok.Show();
         }
+        public void button_click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (DataGrid1[i, j].Value.ToString() == "0")
+                        matr[i, j] = false;
+                    else
+                        matr[i, j] = true;
+                }
+            }
+            Form2.Close();
+            MessageBox.Show("Mask added!");
+            
+
+        }
+       
+
     }
 }
