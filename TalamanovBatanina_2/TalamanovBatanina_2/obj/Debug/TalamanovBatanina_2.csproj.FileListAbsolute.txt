@@ -22,3 +22,4 @@ C:\Users\ПК\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatani
 C:\Users\ПК\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.csproj.GenerateResource.Cache
 C:\Users\ПК\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\bin\Debug\TalamanovBatanina_2.exe
 C:\Users\ПК\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\bin\Debug\TalamanovBatanina_2.pdb
+C:\Users\ПК\Documents\GitHub\ComputerGraph\TalamanovBatanina_2\TalamanovBatanina_2\obj\Debug\TalamanovBatanina_2.Form2.resources

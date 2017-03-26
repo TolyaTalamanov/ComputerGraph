@@ -42,6 +42,7 @@
             this.verticalWavesFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalWavesFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.effectOfGlassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoSelvesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.матричныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.размытиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтерГаусаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,14 +54,16 @@
             this.dilationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medianFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button2 = new System.Windows.Forms.Button();
-            this.gradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoSelvesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setMaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.x3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.x5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +72,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.фильтрыToolStripMenuItem,
-            this.фильтрыToolStripMenuItem1});
+            this.фильтрыToolStripMenuItem1,
+            this.setMaskToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(829, 24);
@@ -182,6 +186,13 @@
             this.effectOfGlassToolStripMenuItem.Text = "EffectOfGlass";
             this.effectOfGlassToolStripMenuItem.Click += new System.EventHandler(this.effectOfGlassToolStripMenuItem_Click);
             // 
+            // autoSelvesToolStripMenuItem
+            // 
+            this.autoSelvesToolStripMenuItem.Name = "autoSelvesToolStripMenuItem";
+            this.autoSelvesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.autoSelvesToolStripMenuItem.Text = "AutoSelves";
+            this.autoSelvesToolStripMenuItem.Click += new System.EventHandler(this.autoSelvesToolStripMenuItem_Click);
+            // 
             // матричныеToolStripMenuItem
             // 
             this.матричныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -269,6 +280,13 @@
             this.closingToolStripMenuItem.Text = "Closing";
             this.closingToolStripMenuItem.Click += new System.EventHandler(this.closingToolStripMenuItem_Click);
             // 
+            // gradToolStripMenuItem
+            // 
+            this.gradToolStripMenuItem.Name = "gradToolStripMenuItem";
+            this.gradToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.gradToolStripMenuItem.Text = "Grad";
+            this.gradToolStripMenuItem.Click += new System.EventHandler(this.gradToolStripMenuItem_Click);
+            // 
             // medianFilterToolStripMenuItem
             // 
             this.medianFilterToolStripMenuItem.Name = "medianFilterToolStripMenuItem";
@@ -322,19 +340,27 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // gradToolStripMenuItem
+            // setMaskToolStripMenuItem
             // 
-            this.gradToolStripMenuItem.Name = "gradToolStripMenuItem";
-            this.gradToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gradToolStripMenuItem.Text = "Grad";
-            this.gradToolStripMenuItem.Click += new System.EventHandler(this.gradToolStripMenuItem_Click);
+            this.setMaskToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.x3ToolStripMenuItem,
+            this.x5ToolStripMenuItem});
+            this.setMaskToolStripMenuItem.Name = "setMaskToolStripMenuItem";
+            this.setMaskToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.setMaskToolStripMenuItem.Text = "Set mask";
             // 
-            // autoSelvesToolStripMenuItem
+            // x3ToolStripMenuItem
             // 
-            this.autoSelvesToolStripMenuItem.Name = "autoSelvesToolStripMenuItem";
-            this.autoSelvesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.autoSelvesToolStripMenuItem.Text = "AutoSelves";
-            this.autoSelvesToolStripMenuItem.Click += new System.EventHandler(this.autoSelvesToolStripMenuItem_Click);
+            this.x3ToolStripMenuItem.Name = "x3ToolStripMenuItem";
+            this.x3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.x3ToolStripMenuItem.Text = "3x3";
+            this.x3ToolStripMenuItem.Click += new System.EventHandler(this.x3ToolStripMenuItem_Click);
+            // 
+            // x5ToolStripMenuItem
+            // 
+            this.x5ToolStripMenuItem.Name = "x5ToolStripMenuItem";
+            this.x5ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.x5ToolStripMenuItem.Text = "5x5";
             // 
             // Form1
             // 
@@ -392,6 +418,9 @@
         private System.Windows.Forms.ToolStripMenuItem medianFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoSelvesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setMaskToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem x3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem x5ToolStripMenuItem;
     }
 }
 

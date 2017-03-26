@@ -214,5 +214,24 @@ namespace TalamanovBatanina_2
             Filters filter = new AutoSelvesFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void x3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int n = 3;
+            Form Form2 = new Form();
+            Form2.Size = new Size(300, 150);
+            Form2.Show();
+            DataGridView DataGrid1 = new DataGridView();
+            DataGrid1.Size = new Size(200, 100);
+            DataGrid1.ColumnCount = n;
+            DataGrid1.RowCount = n;
+            for (int i = 0; i < 3; i++)
+            {
+                DataGrid1.Columns[i].Width = 50;
+                DataGrid1.Rows[i].Height = 25;
+            }
+            Form2.Controls.Add(DataGrid1);
+            DataGrid1.Show();
+        }
     }
 }

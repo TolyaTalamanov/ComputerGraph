@@ -10,20 +10,23 @@ class MyColor : IComparable
     public int R;
     public int G;
     public int B;
+    public double I;
     public MyColor(int R, int G, int B)
     {
         this.R = R;
         this.G = G;
         this.B = B;
+        this.I = 0.36 * R + 0.53 * G + 0.11 * B;
+
     }
 
     public int CompareTo(object obj)
     {
         MyColor ob = (MyColor)obj;
-        if (R + G + B > ob.R + ob.G + ob.B)
+        if (I > ob.I)
             return 1;
 
-        if (R + G + B == ob.R + ob.G + ob.B)
+        if (I == ob.I)
             return 0;
 
         return -1;
